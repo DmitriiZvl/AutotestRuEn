@@ -2,7 +2,7 @@ import pytest
 from selenium import webdriver
 import time
 
-def test_link(browser):
+def test_find_card_button(browser):
     link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/"
     browser.get(link)
     
