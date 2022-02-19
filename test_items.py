@@ -5,6 +5,9 @@ import time
 def test_link(browser):
     link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/"
     browser.get(link)
+    
+    time.sleep(30)
+    
     url=browser.current_url.split('/')
     langUrl=url[3]
     print("URL -- ",url,'\nlangUrl -- ',langUrl)
@@ -25,6 +28,6 @@ def test_link(browser):
         print('Button text -- ',button.text)
         assert button.text=='Añadir al carrito', 'The text is not in Spanish or does not match'
 
-    time.sleep(30)
+    
     
 #pytest --browser_name=chrome --language=fr -s -v test_items.py
